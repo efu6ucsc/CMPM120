@@ -15,7 +15,8 @@ Mod Title: Rocket Patrol Plus
 
 5-Point Tier
 ✓ --> Create a new enemy Spaceship type (w/ new artwork) that's smaller, moves faster, and is worth more points (5)
---> Implement mouse control for player movement and left mouse click to fire (5)
+✓ --> Implement mouse control for player movement and left mouse click to fire (5)
+    ↪ a little buggy, if you hit refresh and not move the mouse you can use arrow keys but if you move the mouse while the game screen is open the rocket will always lock back to where the mouse cursor is
 
 Citations: W3schools, MDN Web Docs
 **/
