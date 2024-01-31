@@ -1,6 +1,7 @@
 /**
 Evelyn Fu
 Mod Title: Rocket Patrol Plus
+Time Taken: ~12 Hours
 
 1-Point Tier
 ✓ --> Track a high score that persists across scenes and display it in the UI (1)
