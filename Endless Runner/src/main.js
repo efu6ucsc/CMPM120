@@ -35,11 +35,26 @@ Does your game...
 * ...have a great visual style? Does it use music or art that you're particularly proud of? Are you trying something new or clever with the endless runner form? (1)
 **/
 
+'use strict'
+
 let config = {
     type: Phaser.AUTO,
     width: 640,
     height: 480,
-    scene: [ Menu, Play ]
+    scale: {
+        autoCenter: Phaser.Scale.CENTER_BOTH
+    },
+    physics: {
+        default: 'arcade',
+        arcade: {
+            //debug: true,
+            gravity: {
+                x: 0,
+                y: 0
+            }
+        }
+    },
+    scene: [ Load, MainMenu, Play, GameOver ]
 }
 
 let game = new Phaser.Game(config)
