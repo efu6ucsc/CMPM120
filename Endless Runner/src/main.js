@@ -57,4 +57,9 @@ let config = {
     scene: [ Load, MainMenu, Play, GameOver ]
 }
 
+//define game
 let game = new Phaser.Game(config)
+
+//define globals
+let cursors
+let { height, width } = game.config

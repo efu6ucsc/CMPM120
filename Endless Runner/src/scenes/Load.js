@@ -33,10 +33,20 @@ class Load extends Phaser.Scene {
     }
 
     create() {
+        //player entity animation creation
         this.anims.create({
             key: 'player',
             frames: this.anims.generateFrameNumbers('orb', {start: 0, end: 7, first: 0}),
             frameRate: 12
         })
+
+        //create player entity
+        this.player = this.physics.add.sprite(width/2, height/2,'orb', 1).setScale(2)
+        this.player.body.setCollideWorldBounds(true)
+
+        //set player body size
+        this.player.body.setSize(32, 32)
+
+        this.scene.start('menuScene')
     }
 }
