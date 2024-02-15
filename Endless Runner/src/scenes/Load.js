@@ -26,10 +26,10 @@ class Load extends Phaser.Scene {
         })
         
         //audio assets
-        this.load.audio('music-background', ['sfx/background.mp3'])
-        this.load.audio('sfx-start', ['sfx/start.mp3'])
-        this.load.audio('sfx-transition', ['sfx/transition-mode-ping.mp3'])
-        this.load.audio('sfx-gameover', ['sfx/gameover.mp3'])
+        this.load.audio('music-background', 'sfx/background.mp3')
+        this.load.audio('sfx-start', 'sfx/start.mp3')
+        this.load.audio('sfx-transition', 'sfx/transition-mode-ping.mp3')
+        this.load.audio('sfx-gameover', 'sfx/gameover.mp3')
     }
 
     create() {
@@ -39,14 +39,17 @@ class Load extends Phaser.Scene {
             frames: this.anims.generateFrameNumbers('orb', {start: 0, end: 7, first: 0}),
             frameRate: 12
         })
-
+    
         //create player entity
-        this.player = this.physics.add.sprite(width/2, height/2,'orb', 1).setScale(2)
+        this.player = this.physics.add.sprite(width / 2, height / 2,'orb', 1).setScale(2)
         this.player.body.setCollideWorldBounds(true)
-
+    
         //set player body size
         this.player.body.setSize(32, 32)
-
+    
+        //set player animation
+        this.player.anims.play('player')
+    
         this.scene.start('menuScene')
     }
 }
